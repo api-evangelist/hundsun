@@ -1,119 +1,52 @@
+aid: hundsun
 name: Hundsun Technologies
-description: Hundsun Technologies Inc. is a leading Chinese fintech company providing software solutions and services for financial institutions, including securities, funds, futures, banking, and asset management sectors.
-image: https://www.hundsun.com/static/images/logo.png
-url: https://www.hundsun.com
-created: '2024'
-modified: '2024'
+description: >-
+  Hundsun Technologies Inc. is a leading Chinese fintech company providing
+  software solutions and services for financial institutions including
+  securities, funds, futures, banking, and asset management sectors.
+url: https://raw.githubusercontent.com/api-evangelist/hundsun/refs/heads/main/apis.yml
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- Financial Technology
-- Securities Trading
-- Banking Software
-- Asset Management
-- Wealth Management
-- Fintech
-- China
+  - Financial Technology
+  - Securities Trading
+  - Banking Software
+  - Asset Management
+  - China
+created: '2024'
+modified: '2026-03-16'
+specificationVersion: '0.19'
 apis:
-- name: Hundsun Trading API
-  description: API for securities trading operations including order placement, cancellation, and query functions
-  baseURL: https://api.hundsun.com/trading/v1
-  humanURL: https://www.hundsun.com/products/trading
-  image: https://www.hundsun.com/static/images/trading-api.png
-  tags:
-  - Trading
-  - Securities
-  - Orders
-  properties:
-  - type: Documentation
-    url: https://docs.hundsun.com/trading-api
-  - type: OpenAPI
-    url: https://api.hundsun.com/trading/openapi.yaml
-  - type: Authentication
-    url: https://docs.hundsun.com/authentication
-  contact:
-  - type: Support
-    url: https://support.hundsun.com
-  - type: Email
-    url: mailto:api-support@hundsun.com
-- name: Hundsun Wealth Management API
-  description: API for wealth management platform integration including portfolio management, product recommendations, and customer analytics
-  baseURL: https://api.hundsun.com/wealth/v1
-  humanURL: https://www.hundsun.com/products/wealth-management
-  image: https://www.hundsun.com/static/images/wealth-api.png
-  tags:
-  - Wealth Management
-  - Portfolio
-  - Analytics
-  properties:
-  - type: Documentation
-    url: https://docs.hundsun.com/wealth-api
-  - type: OpenAPI
-    url: https://api.hundsun.com/wealth/openapi.yaml
-  - type: Pricing
-    url: https://www.hundsun.com/pricing/wealth-api
-  contact:
-  - type: Support
-    url: https://support.hundsun.com
-  - type: Sales
-    url: mailto:sales@hundsun.com
-- name: Hundsun Fund Management API
-  description: API for fund management operations including fund subscription, redemption, transaction queries, and NAV calculations
-  baseURL: https://api.hundsun.com/fund/v1
-  humanURL: https://www.hundsun.com/products/fund-management
-  image: https://www.hundsun.com/static/images/fund-api.png
-  tags:
-  - Fund Management
-  - Mutual Funds
-  - NAV
-  properties:
-  - type: Documentation
-    url: https://docs.hundsun.com/fund-api
-  - type: OpenAPI
-    url: https://api.hundsun.com/fund/openapi.yaml
-  - type: SDKs
-    url: https://github.com/hundsun/fund-api-sdks
-  contact:
-  - type: Support
-    url: https://support.hundsun.com
-- name: Hundsun Risk Management API
-  description: API for real-time risk monitoring, compliance checking, and risk assessment for financial institutions
-  baseURL: https://api.hundsun.com/risk/v1
-  humanURL: https://www.hundsun.com/products/risk-management
-  image: https://www.hundsun.com/static/images/risk-api.png
-  tags:
-  - Risk Management
-  - Compliance
-  - Monitoring
-  properties:
-  - type: Documentation
-    url: https://docs.hundsun.com/risk-api
-  - type: OpenAPI
-    url: https://api.hundsun.com/risk/openapi.yaml
-  - type: Rate Limits
-    url: https://docs.hundsun.com/rate-limits
-  contact:
-  - type: Support
-    url: https://support.hundsun.com
-  - type: Email
-    url: mailto:risk-api@hundsun.com
+  - aid: hundsun:hundsun-trading-api
+    name: Hundsun Trading API
+    description: >-
+      API for securities trading operations including order placement,
+      cancellation, and query functions for financial institutions.
+    humanURL: https://www.hundsun.com/products/trading
+    tags:
+      - Trading
+      - Securities
+      - Orders
+    properties:
+      - type: Documentation
+        url: https://www.hundsun.com/products/trading
+  - aid: hundsun:hundsun-wealth-management-api
+    name: Hundsun Wealth Management API
+    description: >-
+      API for wealth management platform integration including portfolio
+      management, product recommendations, and customer analytics.
+    humanURL: https://www.hundsun.com/products/wealth-management
+    tags:
+      - Wealth Management
+      - Portfolio
+    properties:
+      - type: Documentation
+        url: https://www.hundsun.com/products/wealth-management
 common:
-- type: Portal
-  url: https://developer.hundsun.com
-- type: Authentication
-  url: https://docs.hundsun.com/authentication
-- type: Status
-  url: https://status.hundsun.com
-- type: Terms of Service
-  url: https://www.hundsun.com/terms
-- type: Privacy Policy
-  url: https://www.hundsun.com/privacy
-- type: Support
-  url: https://support.hundsun.com
-- type: GitHub
-  url: https://github.com/hundsun
-- type: Blog
-  url: https://blog.hundsun.com
+  - type: Website
+    url: https://www.hundsun.com
+  - type: Support
+    url: https://support.hundsun.com
 maintainers:
-- type: Primary
-  name: Hundsun Technologies
-  email: api@hundsun.com
-  url: https://www.hundsun.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
