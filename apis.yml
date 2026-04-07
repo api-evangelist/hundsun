@@ -8,11 +8,11 @@ url: https://raw.githubusercontent.com/api-evangelist/hundsun/refs/heads/main/ap
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
+  - Asset Management
+  - Banking Software
+  - China
   - Financial Technology
   - Securities Trading
-  - Banking Software
-  - Asset Management
-  - China
 created: '2024'
 modified: '2026-03-16'
 specificationVersion: '0.19'
@@ -24,9 +24,9 @@ apis:
       cancellation, and query functions for financial institutions.
     humanURL: https://www.hundsun.com/products/trading
     tags:
-      - Trading
-      - Securities
       - Orders
+      - Securities
+      - Trading
     properties:
       - type: Documentation
         url: https://www.hundsun.com/products/trading
@@ -37,8 +37,8 @@ apis:
       management, product recommendations, and customer analytics.
     humanURL: https://www.hundsun.com/products/wealth-management
     tags:
-      - Wealth Management
       - Portfolio
+      - Wealth Management
     properties:
       - type: Documentation
         url: https://www.hundsun.com/products/wealth-management
