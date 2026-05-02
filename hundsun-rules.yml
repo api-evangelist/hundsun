@@ -1,0 +1,103 @@
+aid: hundsun
+name: Hundsun Technologies Rules
+description: >-
+  Operational rules and guardrails for working with Hundsun Technologies
+  enterprise platforms. Codifies enterprise-licensing scope, regulatory
+  context (China financial markets), credential handling, and write-action
+  policies for agents and integrations.
+modified: '2026-04-28'
+rules:
+  - id: hundsun-enterprise-scope
+    name: Enterprise Licensing Scope
+    description: >-
+      Hundsun platforms are licensed enterprise products with bespoke
+      deployments, not a public developer API. Agents must not assume
+      hosted endpoints, hallucinate base URLs, or invent OpenAPI links.
+      Any integration requires customer-specific deployment URLs and
+      credentials provided by the operator.
+    applies_to:
+      - hundsun:hundsun-trading-platform
+      - hundsun:hundsun-wealth-management-platform
+      - hundsun:hundsun-fund-management-platform
+    severity: required
+  - id: hundsun-china-regulatory
+    name: Chinese Financial Regulatory Compliance
+    description: >-
+      Hundsun systems serve regulated entities under CSRC, PBoC, NFRA,
+      and exchange (SSE/SZSE/CFFEX) rules. Trading, fund, and wealth
+      operations must respect onshore data residency, market hours,
+      cross-border data export restrictions, and KYC requirements.
+    applies_to:
+      - hundsun:hundsun-trading-platform
+      - hundsun:hundsun-wealth-management-platform
+      - hundsun:hundsun-fund-management-platform
+    severity: required
+  - id: hundsun-credential-handling
+    name: Credential Handling
+    description: >-
+      Customer-specific API tokens, mTLS certificates, FIX session
+      credentials, and database passwords are highly sensitive. Never
+      embed in source control, logs, or transcripts; rotate on suspected
+      exposure.
+    applies_to:
+      - hundsun:hundsun-trading-platform
+      - hundsun:hundsun-wealth-management-platform
+      - hundsun:hundsun-fund-management-platform
+    severity: required
+  - id: hundsun-trading-confirm
+    name: Confirm Trade Submission
+    description: >-
+      Order placement, modification, and cancellation can move money
+      and impact markets. Agents must surface symbol, side, quantity,
+      price, and account, and require explicit user confirmation before
+      submitting orders. Never auto-retry order submissions on ambiguous
+      responses.
+    applies_to:
+      - hundsun:hundsun-trading-platform
+    severity: required
+  - id: hundsun-fund-flow-confirm
+    name: Confirm Fund Subscription and Redemption
+    description: >-
+      Fund subscription and redemption operations move client capital.
+      Require explicit user confirmation including fund code, amount or
+      shares, and account before submission.
+    applies_to:
+      - hundsun:hundsun-fund-management-platform
+    severity: required
+  - id: hundsun-customer-data
+    name: Customer Data Protection
+    description: >-
+      Wealth management and trading systems hold personally identifiable
+      and financial information about end customers. Apply minimum
+      necessary access, never forward customer data to third-party LLMs
+      or storage without operator authorization, and respect contractual
+      data-handling terms.
+    applies_to:
+      - hundsun:hundsun-trading-platform
+      - hundsun:hundsun-wealth-management-platform
+      - hundsun:hundsun-fund-management-platform
+    severity: required
+  - id: hundsun-market-hours
+    name: Respect Market Hours
+    description: >-
+      Trading operations should be scheduled with awareness of mainland
+      China market sessions and call auctions. Avoid sending order
+      traffic during pre-open or post-close windows unless the venue
+      explicitly supports it.
+    applies_to:
+      - hundsun:hundsun-trading-platform
+    severity: recommended
+  - id: hundsun-vendor-channels
+    name: Use Vendor Support Channels
+    description: >-
+      Integration questions and credential rotation must be handled
+      through Hundsun support and the customer's account team, not by
+      probing public infrastructure or scraping product pages.
+    applies_to:
+      - hundsun:hundsun-trading-platform
+      - hundsun:hundsun-wealth-management-platform
+      - hundsun:hundsun-fund-management-platform
+    severity: recommended
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
