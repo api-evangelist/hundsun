@@ -64,6 +64,10 @@ apis:
       - type: Documentation
         url: https://www.hundsun.com/products/fund-management
 common:
+  - type: GitHubOrganization
+    url: https://github.com/hundsun
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/hundsun
   - type: Website
     url: https://www.hundsun.com
   - type: Support
