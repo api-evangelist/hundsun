@@ -75,7 +75,7 @@ common:
   - type: Rules
     url: >-
       https://raw.githubusercontent.com/api-evangelist/hundsun/refs/heads/main/hundsun-rules.yml
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://www.hundsun.com/llms.txt
 maintainers:
   - FN: Kin Lane
