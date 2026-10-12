@@ -1,0 +1,18 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/hundsun/integrations
+- https://zapier.com/apps/hundsun-technologies/integrations
+- https://n8n.io/integrations/hundsun/
+- https://composio.dev/toolkits/hundsun
+- https://monid.ai/tools/hundsun
+checked:
+- https://composio.dev/toolkits/hundsun
+- https://monid.ai/tools/hundsun
+- https://n8n.io/integrations/hundsun/
+- https://zapier.com/apps/hundsun-technologies/integrations
+- https://zapier.com/apps/hundsun/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
